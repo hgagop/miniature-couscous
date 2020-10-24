@@ -1,0 +1,46 @@
+.violet.button {
+    margin-left: 10px;
+}
+
+#uploaded {
+    margin-bottom: 5px;
+}
+
+.name-logo {
+    color: black;
+}
+
+.search-bar {
+    padding-top: 13px;
+    padding-right: 30px;
+}
+
+#search {
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.ui.main.text.container {
+    margin-top: 75px;
+}
+
+h1 {
+    padding-top: 75px;
+}
+
+.ui.search>.prompt {
+    padding-right: 150px;
+}
+
+.ui.center.aligned.grid form {
+    margin-top: 75px;
+}
+
+a {
+    color: inherit;
+}
+
+#delete {
+    display: inline;
+}
