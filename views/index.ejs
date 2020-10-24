@@ -1,0 +1,43 @@
+<%- include('./partials/header') %> 
+
+<div class="ui center aligned grid">
+    <form class="search-bar" action="/inventory/results" method="GET">
+        <div class="ui search">
+            <input type="text" name="name" class="prompt" placeholder="Search...">
+        </div>
+    </form>
+</div>
+<div class="ui centered aligned grid">
+    <div class="ui animated violet basic button" tabindex="0">
+        <div class="visible content">Add a new item</div>
+        <div class="hidden content"><a href="/inventory/add"><i class="plus square outline icon"></i></a></div>
+    </div>
+</div>
+
+<div class="ui centered aligned grid">
+    <h1>All Stock</h1>
+</div>
+
+<div class="ui main text container">
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% wines.forEach(function(Wine) { %>
+                <div class="item">
+                    <div class="content">
+                        <%= Wine.name %> 
+                    </div>
+                    <div class="description">
+                        Rating
+                        <%= Wine.rating %>
+                    </div>
+                    <a class='ui mini floated basic violet button' href="/inventory/<%= Wine._id %> ">
+                        More...
+                        <i class="right chevron icon"></i>
+                    </a>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %> 

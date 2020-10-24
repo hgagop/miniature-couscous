@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= Wine.name %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content" id="uploaded">
+                Uploaded
+                <span><%= Wine.uploaded.toDateString() %> </span>
+            </div>
+            <div class="description">
+                QUANTITY
+                <p><%= Wine.quantity %> </p>
+                LOCATION
+                <p><%= Wine.location %> </p>
+                TYPE
+                <p><%= Wine.type %> </p>
+                RATING
+                <p><%= Wine.rating %> </p>
+            </div>
+            <a class="ui animated orange basic button" href="/inventory/<%= Wine._id %>/edit">
+                <div class="visible content">
+                    Edit
+                </div>
+                <div class="hidden content">
+                    <i class="edit outline icon"></i>
+                </div>
+            </a>
+            <form id="delete" action="/inventory/<%= Wine._id %>?_method=DELETE" method="post">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
